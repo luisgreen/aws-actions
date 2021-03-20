@@ -1,5 +1,5 @@
-name: 'Github Action Matrix Generator'
-description: 'Action for getting deploy, build and cypress matrices for next steps'
+name: 'Aws Amplify Deployer Action'
+description: 'GitHub action creates a deployment into an existing Amplify aplication'
 inputs:
   appId:
     description: Amplify Application ID

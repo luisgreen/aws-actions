@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-// const github = require('@actions/github');
 const AWS = require('aws-sdk');
 const axios = require('axios');
 const { readFileSync } = require('fs');
@@ -37,15 +36,15 @@ const uploadArtifact = (deploymentResult, artifactPath) => {
 
   const data = readFileSync(artifactPath);
 
-  return axios.put(
-    zipUploadUrl,
-    { data },
-    {
+  return axios
+    .put(zipUploadUrl, data, {
       maxContentLength: Infinity,
       maxBodyLength: Infinity,
       headers: { 'Content-Type': 'application/zip' },
-    },
-  );
+    })
+    .then(({ data }) => {
+      console.log(data);
+    });
 };
 
 let createdDeployment;
@@ -61,13 +60,13 @@ createDeployment({ appId, branchName })
     return startDeployment({ appId, branchName, jobId });
   })
   .then((createdDeployment) => {
-    core.setOutput('jobId', createrDeployment.jobId);
+    core.setOutput('jobId', createdDeployment.jobId);
     console.log(createdDeployment);
   })
   .catch((e) => {
     const { jobId } = createdDeployment;
     if (jobId) {
-      console.log(`Error detected, stopping anmplify job ${jobId}`);
+      console.log(`Error detected, stopping amplify job ${jobId}`);
       var params = { appId, branchName, jobId };
       amplify.stopJob(params, (err, data) => {
         console.log(data);
