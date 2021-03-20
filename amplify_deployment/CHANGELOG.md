@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/luisgreen/aws-actions/compare/v0.1.1...v0.1.2) (2021-03-20)
+
+
+### Bug Fixes
+
+* **amplify:** Bad input value ([7fbcf5d](https://github.com/luisgreen/aws-actions/commit/7fbcf5d05435e1b48b5c06893fd29c8cd937b177))
+
+
+
+
+
 ## [0.1.1](https://github.com/luisgreen/aws-actions/compare/v0.0.2...v0.1.1) (2021-03-20)
 
 
