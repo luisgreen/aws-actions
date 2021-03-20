@@ -20,7 +20,8 @@
   "homepage": "https://github.com/luisgreen/aws-actions#readme",
   "private": true,
   "workspaces": [
-    "amplify_deployment"
+    "amplify_deployment",
+    "amplify_stop_jobs"
   ],
   "scripts": {
     "build": "lerna run build",
