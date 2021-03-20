@@ -5,7 +5,7 @@ const axios = require('axios');
 const { readFileSync } = require('fs');
 
 const appId = core.getInput('appId');
-const branchName = core.getInput('appId');
+const branchName = core.getInput('branchName');
 const artifactPath = core.getInput('artifactPath');
 const region = core.getInput('region');
 
