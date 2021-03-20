@@ -1,0 +1,22 @@
+name: 'Github Action Matrix Generator'
+description: 'Action for getting deploy, build and cypress matrices for next steps'
+inputs:
+  appId:
+    description: Amplify Application ID
+    required: true
+  branchName:
+    description: Amplify Application branch to deploy
+    required: true
+  artifactPath:
+    description: Path where the artifact is located to be deployed
+    required: true
+  region:
+    description: Region of the Amplify Application
+    required: true
+outputs:
+  jobId:
+    description: 'Final Job Id that was generated after a deployment request'
+
+runs:
+  using: 'node12'
+  main: './dist/index.js'

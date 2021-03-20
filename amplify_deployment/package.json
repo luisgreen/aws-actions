@@ -1,0 +1,20 @@
+{
+  "name": "@aws-actions/amplify_deployment",
+  "version": "0.0.0",
+  "description": "GitHub action creates a deployment into an existing Amplify aplication.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build -m ./src/index.js",
+    "lint": "eslint ./src/**/*.js --ignore-path ../.gitignore --fix"
+  },
+  "author": "Luis Chacón",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "aws-sdk": "^2.868.0",
+    "axios": "^0.21.1",
+    "ncc": "^0.3.6",
+    "prettier": "^2.2.1"
+  }
+}
