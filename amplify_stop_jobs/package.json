@@ -1,6 +1,6 @@
 {
   "name": "@aws-actions/amplify_stop_jobs",
-  "version": "0.0.0",
+  "version": "0.1.4",
   "description": "Action for stopping previous Job Runs for an specific branch/appId",
   "main": "index.js",
   "scripts": {
