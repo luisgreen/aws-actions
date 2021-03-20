@@ -11,7 +11,7 @@ const region = core.getInput('region');
 
 var amplify = new AWS.Amplify({ region });
 
-const createDeployment = (params) => {
+const createDeployment = (deployParams) => {
   return amplify
     .createDeployment(deployParams)
     .promise()
